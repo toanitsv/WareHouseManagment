@@ -13,27 +13,50 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Đăng Nhập" Height="270" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Margin="35,10,35,10">
+        Title="Đăng Nhập" Height="270" Width="360" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBox materialDesign:HintAssist.Hint="Tên Đăng Nhập" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-        <PasswordBox Grid.Row="1" materialDesign:HintAssist.Hint="Mật Khẩu"/>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="30"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Button Style="{DynamicResource MaterialDesignRaisedButton}" BorderBrush="Transparent" Background="Green" materialDesign:ShadowAssist.ShadowDepth="Depth2">
-                Đăng Nhập
-            </Button>
-            <Button Grid.Column="2" Style="{DynamicResource MaterialDesignRaisedButton}" BorderBrush="Transparent" materialDesign:ShadowAssist.ShadowDepth="Depth2">
-                Thoát
-            </Button>
+        <materialDesign:ColorZone Mode="PrimaryDark" Padding="6" CornerRadius="0,0,0,0" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <ToggleButton Style="{DynamicResource MaterialDesignHamburgerToggleButton}" />
+                    <TextBlock VerticalAlignment="Center" Margin="16 0 0 0">Đăng Nhập</TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Button Background="Transparent" ToolTip="Close">
+                        <materialDesign:PackIcon Kind="WindowClose" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </materialDesign:ColorZone>
+        <Grid Grid.Row="1" Margin="35,10,35,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="txtUserName" materialDesign:HintAssist.Hint="Tên Đăng Nhập" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <PasswordBox x:Name="txtPassword" Grid.Row="1" materialDesign:HintAssist.Hint="Mật Khẩu"/>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnLogin" Style="{DynamicResource MaterialDesignRaisedButton}" BorderBrush="Transparent" Background="Green" materialDesign:ShadowAssist.ShadowDepth="Depth2">
+                    Đăng Nhập
+                </Button>
+                <Button x:Name="btnCancel" Grid.Column="2" Style="{DynamicResource MaterialDesignRaisedButton}" BorderBrush="Transparent" materialDesign:ShadowAssist.ShadowDepth="Depth2">
+                    Thoát
+                </Button>
+            </Grid>
         </Grid>
     </Grid>
 </Window>
