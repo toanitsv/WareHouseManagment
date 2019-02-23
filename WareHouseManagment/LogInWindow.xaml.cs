@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WareHouseManagment.Helper;
 
 namespace WareHouseManagment
 {
@@ -28,6 +29,48 @@ namespace WareHouseManagment
         {
             txtUserName.Focus();
             btnLogin.IsDefault = true;
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            txtPassword.Clear();
+            MainWindow mainWindow = new MainWindow();
+            this.Hide();
+            mainWindow.ShowDialog();
+            this.Show();
+        }
+
+        private void mDChipSupplier_Click(object sender, RoutedEventArgs e)
+        {
+            if (mDChipSupplier.Icon.ToString().Equals("EN"))
+            {
+                mDChipSupplier.Icon = "VN";
+                mDChipSupplier.Content = "English";
+                mDChipSupplier.FlowDirection = FlowDirection.RightToLeft;
+                LanguageHelper.SetLanguageDictionary(ELanguage.VietNamese);
+                this.InitializeComponent();
+
+                return;
+            }
+            if (mDChipSupplier.Icon.ToString().Equals("VN"))
+            {
+                mDChipSupplier.Icon = "EN";
+                mDChipSupplier.Content = "Tiếng Việt";
+                mDChipSupplier.FlowDirection = FlowDirection.LeftToRight;
+                LanguageHelper.SetLanguageDictionary(ELanguage.English);
+                this.InitializeComponent();
+                return;
+            }
+
+        }
+
+        private void mdColorZoneTitle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+        private void btnWindowClose_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
         }
     }
 }

@@ -33,6 +33,7 @@ namespace WareHouseManagment.ViewModel
         }
 
         // Method
+
         public bool CanExecute(object parameter)
         {
             try

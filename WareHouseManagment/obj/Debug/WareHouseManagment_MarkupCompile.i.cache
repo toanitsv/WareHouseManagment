@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\PhucNguyen\Desktop\WareHouseManagment\WareHouseManagment\obj\Debug\
+C:\Users\PhucNguyen\Desktop\WHM\WareHouseManagment\WareHouseManagment\obj\Debug\
 WareHouseManagment
 none
 false
 DEBUG;TRACE
-C:\Users\PhucNguyen\Desktop\WareHouseManagment\WareHouseManagment\App.xaml
-31660807598
+C:\Users\PhucNguyen\Desktop\WHM\WareHouseManagment\WareHouseManagment\App.xaml
+5-1230965536
 
-12719337919
-15339327256
-LogInWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;
+16714506462
+17900757434
+LogInWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;ResourceXAML\ResourceString.en-US.xaml;ResourceXAML\ResourceString.vi-VN.xaml;
 
-False
+True
 

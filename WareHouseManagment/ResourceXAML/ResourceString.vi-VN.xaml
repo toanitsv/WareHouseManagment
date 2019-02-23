@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:local="clr-namespace:WareHouseManagment.ResourceXAML">
+    
+    <!--LoginWindow-->
+    <system:String x:Key="loginTitle">Đăng Nhập</system:String>
+    <system:String x:Key="loginbtnLogin">Đăng Nhập</system:String>
+    <system:String x:Key="loginbtnExit">Thoát</system:String>
+    <system:String x:Key="logintxtUserName">Tên Đăng Nhập</system:String>
+    <system:String x:Key="logintxtPassword">Mật Khẩu</system:String>
+    
+    <!--MainWindow-->
+    <system:String x:Key="mainWindowTitle">Quản Lý Kho</system:String>
+    
+    <system:String x:Key="menuFile">Tệp Tin</system:String>
+    <system:String x:Key="menuFileSave">Lưu</system:String>
+    <system:String x:Key="menuFileLogout">Đăng Xuất</system:String>
+
+    <system:String x:Key="menuManagment">Quản Lý</system:String>
+    <system:String x:Key="menuManagmentWHInventory">Kiểm Kê Kho</system:String>
+
+    <system:String x:Key="menuHelp">Giúp Đỡ</system:String>
+    <system:String x:Key="menuHelpAboutMe">Giới Thiệu</system:String>
+    <system:String x:Key="menuHelpCheckUpdate">Kiểm Tra Cập Nhật</system:String>
+
+    <system:String x:Key="mainWindowOutsoleMaterial">VẬT LIỆU ĐẾ</system:String>
+    <system:String x:Key="mainWindowUpperMaterial">VẬT LIỆU MŨI GIÀY</system:String>
+    <system:String x:Key="mainWindowOthersMaterial">VẬT LIỆU KHÁC</system:String>
+    <system:String x:Key="mainWindowGroupBoxDeliveryDescription">Quá Trình Giao Hàng</system:String>
+</ResourceDictionary>

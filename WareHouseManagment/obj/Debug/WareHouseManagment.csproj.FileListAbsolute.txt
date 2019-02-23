@@ -48,3 +48,5 @@ C:\Users\PhucNguyen\Desktop\WHM\WareHouseManagment\WareHouseManagment\obj\Debug\
 C:\Users\PhucNguyen\Desktop\WHM\WareHouseManagment\WareHouseManagment\obj\Debug\WareHouseManagment.csproj.CopyComplete
 C:\Users\PhucNguyen\Desktop\WHM\WareHouseManagment\WareHouseManagment\obj\Debug\WareHouseManagment.exe
 C:\Users\PhucNguyen\Desktop\WHM\WareHouseManagment\WareHouseManagment\obj\Debug\WareHouseManagment.pdb
+C:\Users\PhucNguyen\Desktop\WHM\WareHouseManagment\WareHouseManagment\obj\Debug\ResourceXAML\ResourceString.en-US.baml
+C:\Users\PhucNguyen\Desktop\WHM\WareHouseManagment\WareHouseManagment\obj\Debug\ResourceXAML\ResourceString.vi-VN.baml

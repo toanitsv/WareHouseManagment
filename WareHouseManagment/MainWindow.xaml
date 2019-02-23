@@ -13,9 +13,102 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        DataContext="{StaticResource MainVM}"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-    <Grid>
-        
+        Title="{DynamicResource ResourceKey=mainWindowTitle}" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <!--DataContext="{StaticResource MainVM}"-->
+    <!--DataContext="{StaticResource MainVM}"-->
+    <!--<Window.Resources>
+        <Style x:Key="MaterialDesignFloatingActionMiniAccentButton" TargetType="{x:Type ButtonBase}" BasedOn="{StaticResource MaterialDesignFloatingActionMiniButton}">
+            <Setter Property="Background" Value="{DynamicResource SecondaryAccentBrush}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource SecondaryAccentBrush}"/>
+            <Setter Property="Foreground" Value="{DynamicResource SecondaryAccentForegroundBrush}"/>
+        </Style>
+    </Window.Resources>-->
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Menu Grid.Column="0" IsMainMenu="True">
+                <MenuItem Header="{DynamicResource ResourceKey=menuFile}">
+                    <MenuItem Header="{DynamicResource ResourceKey=menuFileSave}">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon Kind="ContentSave" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="menuItemLogout" Header="{DynamicResource ResourceKey=menuFileLogout}" Click="menuItemLogout_Click">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon Kind="Logout" />
+                        </MenuItem.Icon>
+                    </MenuItem>    
+                </MenuItem>
+                    <MenuItem Header="{DynamicResource ResourceKey=menuManagment}">
+                        <MenuItem Header="{DynamicResource ResourceKey=menuManagmentWHInventory}">
+                        </MenuItem>
+                    </MenuItem>
+                <MenuItem Header="{DynamicResource ResourceKey=menuHelp}">
+                    <MenuItem Header="{DynamicResource ResourceKey=menuHelpAboutMe}">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon Kind="About"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="{DynamicResource ResourceKey=menuHelpCheckUpdate}">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon Kind="Update"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Button Background="OrangeRed" Height="Auto">
+                <Button.Content>
+                    <Viewbox>
+                        <TextBlock Text="{DynamicResource ResourceKey=mainWindowOutsoleMaterial}"/>
+                    </Viewbox>
+                </Button.Content>
+            </Button>
+            <materialDesign:Badged Grid.Column="1" Height="Auto" Width="Auto" Badge="1992">
+            </materialDesign:Badged>
+            <Button Grid.Column="2" Background="Teal" Height="Auto">
+                <Button.Content>
+                    <Viewbox>
+                        <TextBlock Text="{DynamicResource ResourceKey=mainWindowUpperMaterial}"/>
+                    </Viewbox>
+                </Button.Content>
+            </Button>
+            <materialDesign:Badged Grid.Column="3" Height="Auto" Width="Auto" Badge="1996">
+            </materialDesign:Badged>
+            <Button Grid.Column="4" Background="DeepSkyBlue" Height="Auto">
+                <Button.Content>
+                    <Viewbox>
+                        <TextBlock Text="{DynamicResource ResourceKey=mainWindowOthersMaterial}"/>
+                    </Viewbox>
+                </Button.Content>
+            </Button>
+            <materialDesign:Badged Grid.Column="5" Height="Auto" Width="Auto" Badge="2019">
+            </materialDesign:Badged>
+        </Grid>
+        <GroupBox Grid.Row="2" Margin="0,20,0,0" Header="{DynamicResource ResourceKey=mainWindowGroupBoxDeliveryDescription}" Style="{DynamicResource MaterialDesignGroupBox}" materialDesign:ShadowAssist.ShadowDepth="Depth3" BorderThickness="0">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <TextBlock Margin="6" TextWrapping="Wrap">
+                    Short loin picanha boudin pork belly. Ground round porchetta biltong, cow t-bone tri-tip strip steak chuck filet mignon jowl turducken. Landjaeger strip steak pork chop, jowl sirloin pork capicola andouille. Kevin ribeye tongue, drumstick hamburger frankfurter t-bone corned beef beef biltong cow venison. Biltong picanha bresaola pork belly, filet mignon spare ribs doner pork chop kielbasa. Swine flank drumstick pork belly pancetta spare ribs rump filet mignon.
+                </TextBlock>
+            </ScrollViewer>
+        </GroupBox>
     </Grid>
 </Window>
